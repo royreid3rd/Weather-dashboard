@@ -12,8 +12,8 @@ This is a simple weather dashboard application that allows users to search for w
 ## Technologies Used
 
 - HTML
-- CSS (with Flexbox and Grid for layout)
-- JavaScript (ES6+)
+- CSS 
+- JavaScript
 
 ## Usage
 
