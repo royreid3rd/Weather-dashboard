@@ -28,3 +28,9 @@ This is a simple weather dashboard application that allows users to search for w
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Deployed Application
+
+[Weather Dashboard](https://royreid3rd.github.io/Weather-dashboard/)
+
+![Deployed app](Weather-Dashboard.PNG)
