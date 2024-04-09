@@ -8,25 +8,30 @@
 </head>
 <body>
   <h1>Weather Dashboard</h1>
+  <div class="container">
+    <div class="sidebar">
+      <div id="search-container">
+        <input type="text" id="city-input" placeholder="Search">
+        <button id="search-button">Search</button>
+      </div>
 
-  <div id="search-container">
-    <input type="text" id="city-input" placeholder="Search">
-    <button id="search-button">Search</button>
+      <h2>Previous Searches</h2>
+      <ul id="previous-searches"></ul>
+      <button id="clear-button">Clear Recent Searches</button>
+    </div>
+
+    <div class="content">
+      
+      <div class="banner" id="forecast-banner">
+        <h2 id="banner-city"></h2>
+        <p id="banner-date"></p>
+        <p id="banner-conditions"></p>
+        <p id="banner-high-temp"></p>
+        <p id="banner-low-temp"></p>
+      </div>
+      <div class="forecast-wrapper" id="forecast-wrapper"></div>
+    </div>
   </div>
-
-  <div class="forecast-banner" id="forecast-banner">
-    <h2 id="banner-city"></h2>
-    <p id="banner-date"></p>
-    <p id="banner-conditions"></p>
-    <p id="banner-high-temp"></p>
-    <p id="banner-low-temp"></p>
-  </div>
-
-  <div class="forecast-wrapper" id="forecast-wrapper"></div>
-
-  <h2>Previous Searches</h2>
-  <ul id="previous-searches"></ul>
-  <button id="clear-button">Clear Recent Searches</button>
 
   <script src="./script.js"></script>
 </body>
