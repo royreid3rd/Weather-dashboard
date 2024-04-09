@@ -5,6 +5,7 @@ async function searchCity(city) {
       const cityData = await fetchCityData(city);
       const forecastData = await fetchForecastData(cityData.coord.lat, cityData.coord.lon);
       displayForecast(city, forecastData);
+      displayCurrentDayForecast(city, forecastData);
       updateSearchHistory(city);
     } catch (error) {
       console.error("Error:", error);
@@ -39,7 +40,7 @@ async function searchCity(city) {
     const bannerConditions = document.getElementById("banner-conditions");
     const bannerHighTemp = document.getElementById("banner-high-temp");
     const bannerLowTemp = document.getElementById("banner-low-temp");
-  
+    console.log("Inside displayCurrentDayForecast function");
     bannerCity.textContent = city;
     bannerDate.textContent = `Date: ${currentDate}`;
     bannerConditions.textContent = `Conditions: ${currentConditions}`;

@@ -26,7 +26,7 @@ input {
 button {
     padding: 10px 20px;
     border: 0;
-    background-color: #333;
+    background-color: #1606f7;
     color: #fff;
     border-radius: 5px;
     font-size: 16px;
@@ -34,7 +34,7 @@ button {
 }
 
 button:hover {
-    background-color: #444;
+    background-color: #13bdf1;
 }
 
 #search-container {
@@ -71,7 +71,7 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #0ae1e9;
     transition: transform 0.2s ease-in-out;
   }
   
