@@ -27,9 +27,33 @@ async function searchCity(city) {
     return response.json();
   }
   
+  function displayCurrentDayForecast(city, forecastData) {
+    const currentDayForecast = forecastData.list[0];
+    const currentDate = new Date(currentDayForecast.dt * 1000).toLocaleDateString();
+    const currentConditions = currentDayForecast.weather[0].description;
+    const currentHighTemp = convertKelvinToFahrenheit(currentDayForecast.main.temp_max);
+    const currentLowTemp = convertKelvinToFahrenheit(currentDayForecast.main.temp_min);
+  
+    const bannerCity = document.getElementById("banner-city");
+    const bannerDate = document.getElementById("banner-date");
+    const bannerConditions = document.getElementById("banner-conditions");
+    const bannerHighTemp = document.getElementById("banner-high-temp");
+    const bannerLowTemp = document.getElementById("banner-low-temp");
+  
+    bannerCity.textContent = city;
+    bannerDate.textContent = `Date: ${currentDate}`;
+    bannerConditions.textContent = `Conditions: ${currentConditions}`;
+    bannerHighTemp.textContent = `High Temperature: ${currentHighTemp}°F`;
+    bannerLowTemp.textContent = `Low Temperature: ${currentLowTemp}°F`;
+  }
+  
+
   function displayForecast(city, forecastData) {
-    const forecastContainer = document.getElementById("forecast-container");
-    forecastContainer.innerHTML = "";
+    const forecastWrapper = document.getElementById("forecast-wrapper");
+    forecastWrapper.innerHTML = "";
+  
+    const cardContainer = document.createElement("div");
+    cardContainer.classList.add("card-container");
   
     const uniqueDates = {};
     forecastData.list.forEach(day => {
@@ -40,9 +64,11 @@ async function searchCity(city) {
         const highTemp = convertKelvinToFahrenheit(day.main.temp_max);
         const lowTemp = convertKelvinToFahrenheit(day.main.temp_min);
         const card = createCard(city, date, conditions, highTemp, lowTemp);
-        forecastContainer.appendChild(card);
+        cardContainer.appendChild(card);
       }
     });
+  
+    forecastWrapper.appendChild(cardContainer);
   }
   
   function createCard(city, date, conditions, highTemp, lowTemp) {

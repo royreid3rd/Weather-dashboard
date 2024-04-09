@@ -41,6 +41,13 @@ button:hover {
     text-align: center;
     margin-top: 20px;
 }
+.forecast-banner {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 .forcast-wrapper {
     max-width: 100px; 
     margin: 0 auto; 
@@ -52,6 +59,13 @@ button:hover {
     gap: 10px; /* Adjust the gap between cards */
   }
 
+ 
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   .card {
     padding: 10px;
     border: 1px solid #ccc;
